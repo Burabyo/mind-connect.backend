@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",              // Modern JS target
+    "module": "ESNext",              // ES Modules
+    "moduleResolution": "node",      // Resolves modules like Node
+    "rootDir": "src",                // Source folder
+    "outDir": "dist",                // Build output folder
+    "strict": true,                  // Enable strict TS checks
+    "esModuleInterop": true,         // Default imports for CommonJS modules
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,       // Import JSON if needed
+    "noImplicitAny": true
+  },
+  "include": ["src"]
+}
