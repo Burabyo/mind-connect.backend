@@ -20,6 +20,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Database connection pool
 export const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
+     ssl: { rejectUnauthorized: false },
 });
 // Health check
 app.get("/health", (req, res) => {
