@@ -24,8 +24,10 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Database connection pool
 export const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false } // required for Render Postgres
-});
+  ssl: {
+    rejectUnauthorized: false, // allow Render/Postgres SSL
+  },
+})
 
 // Health check
 app.get("/health", (req: Request, res: Response) => {
